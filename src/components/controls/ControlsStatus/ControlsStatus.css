@@ -94,7 +94,10 @@
   color: var(--text-primary);
 }
 
-/* Add this to your existing CSS */
+/* Remove this line completely: */
+/* import './Sidebar.css';/* Add this to your existing CSS */ */
+
+/* Keep only the CSS styles: */
 .system-status__info {
   color: var(--text-secondary);
   font-size: 0.9em;

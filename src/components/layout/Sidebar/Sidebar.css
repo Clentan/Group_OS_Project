@@ -12,8 +12,11 @@
   flex: 1;
 }
 
+/* Sidebar Component Styles */
 .sidebar__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .sidebar__item {

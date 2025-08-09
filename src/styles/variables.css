@@ -1,0 +1,62 @@
+:root {
+  /* Colors */
+  --bg-primary: #d3d3d3;
+  --bg-secondary: #b0b0b0;
+  --bg-sidebar: #2f2f3d;
+  --bg-sidebar-hover: #4a4a6a;
+  --bg-panel: rgba(255, 255, 255, 0.1);
+  --bg-item: rgba(255, 255, 255, 0.15);
+  --bg-status: rgba(0, 0, 0, 0.6);
+  
+  /* Text Colors */
+  --text-primary: #f0e6ff;
+  --text-secondary: #dcdcdc;
+  --text-sidebar: #bbb;
+  
+  /* Gradients */
+  --gradient-main: linear-gradient(135deg, #3a3a8c, #2a2a6a);
+  --gradient-cpu: linear-gradient(90deg, #f1c40f, #f39c12);
+  --gradient-memory: linear-gradient(90deg, #9b59b6, #8e44ad);
+  --gradient-disk: linear-gradient(90deg, #e74c3c, #c0392b);
+  --gradient-db: linear-gradient(90deg, #f39c12, #f1c40f);
+  --gradient-file: linear-gradient(90deg, #e74c3c, #c0392b);
+  --gradient-net: linear-gradient(90deg, #2ecc71, #27ae60);
+  --gradient-lock: linear-gradient(90deg, #e74c3c, #c0392b);
+  
+  /* Status Colors */
+  --status-green: #2ecc71;
+  --status-yellow: #f1c40f;
+  --status-red: #e74c3c;
+  
+  /* Button Colors */
+  --btn-start: #27ae60;
+  --btn-start-hover: #219150;
+  --btn-pause: #f1c40f;
+  --btn-pause-hover: #d4b30a;
+  --btn-reset: #9b59b6;
+  --btn-reset-hover: #7d3f99;
+  --btn-scan: #8e44ad;
+  --btn-scan-hover: #732d91;
+  --btn-resolve: #e67e22;
+  --btn-resolve-hover: #c76a1b;
+  --btn-force: #e74c3c;
+  --btn-force-hover: #c0392b;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 15px;
+  --spacing-xl: 20px;
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  /* Shadows */
+  --shadow-light: 0 0 8px rgba(0,0,0,0.3);
+  --shadow-medium: 0 0 15px rgba(0,0,0,0.3);
+  --shadow-inset: inset 0 0 8px rgba(0,0,0,0.3);
+  --shadow-progress: inset 0 0 5px rgba(0,0,0,0.5);
+}

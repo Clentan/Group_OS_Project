@@ -1,0 +1,76 @@
+.resource {
+  background: var(--bg-item);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-inset);
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  position: relative;
+}
+
+.resource__icon {
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 16px;
+}
+
+.resource__icon i {
+  font-size: 18px;
+}
+
+.resource__progress-bar {
+  height: 12px;
+  background: #4a4a6a;
+  border-radius: var(--radius-sm);
+  margin: var(--spacing-sm) 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-progress);
+}
+
+.resource__progress {
+  height: 100%;
+  border-radius: var(--radius-sm);
+}
+
+.resource__progress--db {
+  background: var(--gradient-db);
+}
+
+.resource__progress--file {
+  background: var(--gradient-file);
+}
+
+.resource__progress--net {
+  background: var(--gradient-net);
+}
+
+.resource__progress--lock {
+  background: var(--gradient-lock);
+}
+
+.resource__usage {
+  font-size: 12px;
+  margin-top: var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+.resource__access {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.resource__count {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+}

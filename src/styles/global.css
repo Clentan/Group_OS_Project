@@ -1,0 +1,58 @@
+@import './variables.css';
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  background: var(--bg-secondary);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--gradient-main);
+  padding: var(--spacing-xl);
+  overflow-y: auto;
+}
+
+.panels {
+  display: flex;
+  gap: var(--spacing-xl);
+  height: calc(100vh - 120px);
+}
+
+.panel {
+  background: var(--bg-panel);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-medium);
+  overflow-y: auto;
+}
+
+.panel h2 {
+  margin-bottom: var(--spacing-lg);
+  font-weight: 700;
+  font-size: 18px;
+  border-bottom: 2px solid #6a6ab0;
+  padding-bottom: var(--spacing-sm);
+}

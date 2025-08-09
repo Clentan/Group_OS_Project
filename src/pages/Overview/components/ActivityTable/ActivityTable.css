@@ -1,0 +1,82 @@
+.activity-panel {
+  grid-column: 1 / -1;
+  background: var(--bg-panel);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-medium);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.activity-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 2px solid #6a6ab0;
+  padding-bottom: var(--spacing-sm);
+}
+
+.explore-btn {
+  background: var(--btn-scan);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: var(--btn-scan-hover);
+}
+
+.activity-table {
+  overflow-x: auto;
+}
+
+.activity-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.activity-table th,
+.activity-table td {
+  text-align: left;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.activity-table th {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.activity-table td {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge--error {
+  background: var(--status-red);
+  color: white;
+}
+
+.status-badge--pending {
+  background: var(--status-yellow);
+  color: black;
+}

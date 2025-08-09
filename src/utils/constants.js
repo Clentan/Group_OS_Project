@@ -1,0 +1,31 @@
+export const SIMULATION_ACTIONS = {
+  START: 'START_SIMULATION',
+  PAUSE: 'PAUSE_SIMULATION',
+  RESET: 'RESET_SIMULATION',
+  UPDATE_PROCESS: 'UPDATE_PROCESS',
+  UPDATE_RESOURCE: 'UPDATE_RESOURCE',
+  UPDATE_METRICS: 'UPDATE_METRICS',
+  SET_SPEED: 'SET_SPEED'
+};
+
+export const PROCESS_STATUS = {
+  RUNNING: 'running',
+  WAITING: 'waiting',
+  BLOCKED: 'blocked',
+  TERMINATED: 'terminated'
+};
+
+export const RESOURCE_TYPES = {
+  DATABASE: 'database',
+  FILE: 'file',
+  NETWORK: 'network',
+  MUTEX: 'mutex'
+};
+
+export const SIMULATION_SPEEDS = [0.5, 1, 2, 5, 10];
+
+export const UPDATE_INTERVALS = {
+  TIMER: 100,
+  METRICS: 500,
+  SIMULATION: 1000
+};

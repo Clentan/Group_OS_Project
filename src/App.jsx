@@ -1,10 +1,11 @@
 import React from 'react';
-import Sidebar from './components/layout/Sidebar/Sidebar';
+import ControlsStatus from './components/controls/ControlsStatus/ControlsStatus';
+import WFGGraph from './components/graphs/WFGGraph/WFGGraph';
 import Header from './components/layout/Header/Header';
+import Sidebar from './components/layout/Sidebar/Sidebar';
 import SystemMetrics from './components/metrics/SystemMetrics/SystemMetrics';
 import ProcessPool from './components/pools/ProcessPool/ProcessPool';
 import ResourcePool from './components/pools/ResourcePool/ResourcePool';
-import ControlsStatus from './components/controls/ControlsStatus/ControlsStatus';
 import './styles/global.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <section className="panels">
           <SystemMetrics />
+          <WFGGraph />
           <ProcessPool />
           <ResourcePool />
           <ControlsStatus />

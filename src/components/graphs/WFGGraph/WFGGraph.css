@@ -1,0 +1,7 @@
+.wfg-graph {
+  display: flex;
+  flex-direction: column;
+}
+.wfg-graph canvas {
+  border-radius: 8px;
+}

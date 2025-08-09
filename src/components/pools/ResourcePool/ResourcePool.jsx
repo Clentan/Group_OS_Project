@@ -1,31 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { api } from '../../../api/client';
 import './ResourcePool.css';
 
 const ResourcePool = () => {
-  const resources = [
-    { icon: 'fas fa-database', name: 'DB', progress: 67, className: 'resource__progress--db', access: '150ms', count: '1/3' },
-    { icon: 'fas fa-file', name: 'FILE', progress: 100, className: 'resource__progress--file', access: '89ms', count: '0/2' },
-    { icon: 'fas fa-network-wired', name: 'NET', progress: 25, className: 'resource__progress--net', access: '45ms', count: '3/4' },
-    { icon: 'fas fa-lock', name: 'LOCK', progress: 100, className: 'resource__progress--lock', access: '200ms', count: '0/2' },
-  ];
+  const [rows, setRows] = useState([]);
+  const [tot, setTot] = useState({ free: 0, in_use: 0, waiting: 0, total: 0 });
+
+  useEffect(() => {
+    const tick = async () => {
+      try {
+        const { rows, totals } = await api.resources();
+        setRows(rows); setTot(totals);
+      } catch {}
+    };
+    const t = setInterval(tick, 1000);
+    tick();
+    return () => clearInterval(t);
+  }, []);
 
   return (
     <section className="panel resource-pool">
-      <h2>Resource Pool</h2>
-      {resources.map((resource, index) => (
-        <div key={index} className="resource" id={`resource${resource.name}`}>
-          <div className="resource__icon">
-            <i className={resource.icon}></i> {resource.name}
-          </div>
-          <div className="resource__progress-bar">
-            <div 
-              className={`resource__progress ${resource.className}`} 
-              style={{ width: `${resource.progress}%` }}
-            ></div>
-          </div>
-          <div className="resource__usage">Usage</div>
-          <div className="resource__access">Access: {resource.access}</div>
-          <div className="resource__count">{resource.count}</div>
+      <h2>Resource Pool (Free {tot.free} / {tot.total})</h2>
+      {rows.map((r) => (
+        <div key={r.resource} className="resource">
+          <div className="resource__icon">{r.resource}</div>
+          <div className="resource__usage">Holder: {r.holder}</div>
+          <div className="resource__access">Waiting: {r.queued}</div>
+          <div className="resource__count">{r.queue.join(', ')}</div>
         </div>
       ))}
     </section>

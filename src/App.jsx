@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from './components/layout/Sidebar/Sidebar';
 import Simulation from './pages/Simulation/Simulation';
 import Overview from './pages/Overview/Overview';
+import ResourceExplorer from './pages/ResourceExplorer/ResourceExplorer';
 import './styles/global.css';
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
       case 'Overview':
         return <Overview />;
       case 'Simulation':
-        return <Simulation />;
+        return <Simulation setCurrentPage={setCurrentPage} />;
+      case 'Resource Explorer':
+        return <ResourceExplorer setCurrentPage={setCurrentPage} />;
       default:
         return <Overview />;
     }

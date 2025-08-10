@@ -1,6 +1,8 @@
 # Deadlock Systems Detector
 
 A React-based dashboard application for monitoring and analyzing deadlock detection and resolution in operating systems.
+<img width="1033" height="518" alt="image" src="https://github.com/user-attachments/assets/0a981a77-b107-4a7f-b0eb-5b3173903627" />
+
 
 ## Features
 

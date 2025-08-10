@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header/Header';
 import SystemMetrics from './metrics/SystemMetrics/SystemMetrics';
 import ProcessPool from './pools/ProcessPool/ProcessPool';
@@ -6,9 +6,19 @@ import ResourcePool from './pools/ResourcePool/ResourcePool';
 import ControlsStatus from './controls/ControlsStatus/ControlsStatus';
 import './Simulation.css';
 
-function Simulation({ setCurrentPage }) {
+function Simulation({ setCurrentPage, setSystemLogs }) {
+  const [allocatedResources, setAllocatedResources] = useState([]);
+
   const handleResourceExplorer = () => {
     setCurrentPage('Resource Explorer');
+  };
+
+  const handleResourceAllocation = (newAllocations) => {
+    setAllocatedResources(newAllocations);
+  };
+
+  const handleLogsUpdate = (logs) => {
+    setSystemLogs(logs);
   };
 
   return (
@@ -16,12 +26,17 @@ function Simulation({ setCurrentPage }) {
       <Header />
       <section className="simulation-panels">
         <SystemMetrics />
-        <ProcessPool />
+        <ProcessPool 
+          allocatedResources={allocatedResources}
+        />
         <ResourcePool />
-        <ControlsStatus />
+        <ControlsStatus 
+          onResourceAllocation={handleResourceAllocation}
+          setCurrentPage={setCurrentPage}
+          onLogsUpdate={handleLogsUpdate}
+        />
       </section>
       
-      {/* New Resource Explorer Button */}
       <div className="simulation-actions">
         <button 
           className="resource-explorer-btn"
